@@ -1,2 +1,1 @@
-# Minish144
-vk-conversation-graph
+# vk-conversation-graph
