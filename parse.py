@@ -24,10 +24,20 @@ def buildDateJSON(data):
         array += timestampToDate(date)
         return {'date': array} # возвращает словарь под запись в json
 
-
 def writeDataJSON(dictionary):
     with open('data.json', 'w') as f:
         json.dump(dictionary, f)
 
 def timestampToDate(timestamp):
     return str(datetime.datetime.fromtimestamp(timestamp))[:7]
+
+def extremum(dates):
+    datesSet = set(dates)
+    datesSet = sorted(datesSet)
+    dictionary = {"X_Axis": datesSet}
+    array = []
+    for date in datesSet:
+        array.append(list(dates).count(date))
+    dictionary["Y_Axis"] = array
+    return dictionary
+
