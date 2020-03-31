@@ -1,8 +1,7 @@
-from parse import readJSON
+from parse import readJSON, buildJSON
 
 def main():
-    data = readJSON("data/01.19-10.19.json")[0]["f"]
-    print(data)
+    pass
 
 if __name__ == "__main__":
     main()
